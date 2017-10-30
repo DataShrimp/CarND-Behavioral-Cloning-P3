@@ -106,7 +106,7 @@ train_generator = generator(train_samples, batch_size=32)
 valid_generator = generator(valid_samples, batch_size=32)
 hist_ob = model.fit_generator(train_generator, samples_per_epoch=len(train_samples),
                               validation_data=valid_generator, nb_val_samples=len(valid_samples),
-                              nb_epoch=5, verbose=1)
+                              nb_epoch=8, verbose=1)
 
 # save the model
 model.save('model.h5')
